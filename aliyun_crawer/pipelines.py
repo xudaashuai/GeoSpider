@@ -4,7 +4,7 @@
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
-import psycopg2,pymysql
+import pymysql
 from aliyun_crawer.settings import HOST
 
 class AliyunCrawerPipeline(object):
