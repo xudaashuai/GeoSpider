@@ -6,7 +6,8 @@
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import pymysql
 from aliyun_crawer.settings import HOST
-
+import warnings
+warnings.filterwarnings('error', category=pymysql.Warning)
 class AliyunCrawerPipeline(object):
 
     conn = pymysql.connect(host=HOST,port=3306,user='root',password='19980819',database='data',charset='utf8')
