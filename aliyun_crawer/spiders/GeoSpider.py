@@ -9,7 +9,7 @@ from aliyun_crawer.items import *
 
 class GeoSpider(Spider):
     name = 'GeoSpider'
-    api_url = "http://restapi.amap.com/v3/geocode/regeo?key={0}&location={1}&radius=100&extensions=all&batch=true"
+    api_url = "http://restapi.amap.com/v3/geocode/regeo?key={0}&location={1}&radius=1000&extensions=all&batch=true"
     key = '59a8167b169e97d4acda9ad829fbcc23'
     poi_info = ['id', 'name', 'type', 'location', 'address', 'poiweight', 'businessarea']
 
