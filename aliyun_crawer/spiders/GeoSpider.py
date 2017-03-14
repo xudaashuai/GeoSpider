@@ -20,7 +20,7 @@ class GeoSpider(Spider):
         my_cur = conn.cursor()
         my_cur.execute('select location from spois')
         k=my_cur.fetchall()
-        logging.info(k)
+        #logging.info(k)
         for x in k:
             self.locations.add(x[0])
 
