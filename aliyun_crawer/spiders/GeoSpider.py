@@ -37,7 +37,7 @@ class GeoSpider(Spider):
             while location_list.__len__() < 20:
                 location_list.append(self.locations.pop())
             url = self.get_url(location_list)
-            logging.info(url)
+            #logging.info(url)
             yield Request(url=url, callback=self.parse)
 
     def parse(self, response):
