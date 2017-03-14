@@ -18,7 +18,7 @@ class GeoSpider(Spider):
         self.ids = set()
         conn = pymysql.connect(host=HOST,port=3306,user='root',password='19980819',database='data')
         my_cur = conn.cursor()
-        my_cur.execute('select location from spois_copy')
+        my_cur.execute('select location from spois')
         k=my_cur.fetchall()
         logging.info(k)
         for x in k:
