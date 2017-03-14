@@ -20,7 +20,7 @@ class GeoSpider(Spider):
         my_cur = conn.cursor()
         my_cur.execute('select location from spois')
         k=my_cur.fetchall()
-        #logging.info(k)
+        logging.info(k.__len__())
         for x in k:
             self.locations.add(x[0])
 
@@ -39,7 +39,6 @@ class GeoSpider(Spider):
             url = self.get_url(location_list)
             logging.info(url)
             yield Request(url=url, callback=self.parse)
-            return
 
     def parse(self, response):
         result = json.loads(response.text)
